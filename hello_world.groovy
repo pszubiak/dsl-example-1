@@ -1,5 +1,5 @@
 // Creates or updates a free style job.
-job("Hello-World") {
+job("hello-world") {
 
     // Adds build triggers to the job.
     triggers {
