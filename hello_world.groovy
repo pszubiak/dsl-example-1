@@ -1,6 +1,13 @@
 // Creates or updates a free style job.
 job('hello-world') {
 
+    // Allows to parameterize the job.
+    parameters {
+
+        // Defines a simple text parameter, where users can enter a string value.
+        stringParam('response', 'Servus!', 'Worlds response')
+    }
+
     // Adds build triggers to the job.
     triggers {
 
@@ -13,6 +20,13 @@ job('hello-world') {
 
         // Runs a shell script.
         shell('echo Hello World!')
+    }
+
+    // Adds build steps to the jobs.
+    steps {
+
+        // Runs a shell script.
+        shell('echo $response')
     }
 
 }
